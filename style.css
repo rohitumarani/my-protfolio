@@ -176,6 +176,30 @@ body {
     color: var(--primary-color);
 }
 
+/* Resume Button in Navbar */
+.resume-btn {
+    padding: 10px 25px;
+    background: var(--gradient);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+    box-shadow: 0 3px 10px rgba(255, 152, 0, 0.3);
+}
+
+.resume-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 152, 0, 0.4);
+}
+
+.resume-btn i {
+    font-size: 1rem;
+}
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -259,7 +283,9 @@ body {
     text-decoration: none;
     font-weight: 600;
     transition: var(--transition);
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     border: none;
     cursor: pointer;
 }
@@ -425,6 +451,17 @@ body {
 
 .info-item:hover i {
     color: var(--white);
+}
+
+/* Resume Download Section in About */
+.resume-download-section {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.resume-download-section .btn {
+    font-size: 1.1rem;
+    padding: 15px 35px;
 }
 
 /* ===== SKILLS SECTION ===== */
@@ -781,6 +818,10 @@ body {
         right: 0;
     }
 
+    .resume-btn {
+        display: none;
+    }
+
     .hamburger {
         display: flex;
     }
@@ -812,6 +853,7 @@ body {
 
     .hero-buttons {
         justify-content: center;
+        flex-wrap: wrap;
     }
 
     .social-links {
@@ -856,6 +898,11 @@ body {
 
     .hero-buttons {
         flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
     }
 
     .projects-grid {

@@ -1,4 +1,5 @@
 /* ===== GLOBAL STYLES ===== */
+
 * {
     margin: 0;
     padding: 0;
@@ -58,7 +59,9 @@ body {
     border-radius: 2px;
 }
 
+
 /* ===== ANIMATIONS ===== */
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -102,7 +105,8 @@ body {
 }
 
 @keyframes float {
-    0%, 100% {
+    0%,
+    100% {
         transform: translateY(0);
     }
     50% {
@@ -111,7 +115,8 @@ body {
 }
 
 @keyframes pulse {
-    0%, 100% {
+    0%,
+    100% {
         transform: scale(1);
     }
     50% {
@@ -119,7 +124,9 @@ body {
     }
 }
 
+
 /* ===== NAVIGATION ===== */
+
 .navbar {
     position: fixed;
     top: 0;
@@ -176,7 +183,9 @@ body {
     color: var(--primary-color);
 }
 
+
 /* Resume Button in Navbar */
+
 .resume-btn {
     padding: 10px 25px;
     background: var(--gradient);
@@ -214,7 +223,9 @@ body {
     transition: var(--transition);
 }
 
+
 /* ===== HERO SECTION ===== */
+
 .hero {
     min-height: 100vh;
     display: flex;
@@ -257,7 +268,8 @@ body {
 }
 
 @keyframes blink {
-    0%, 100% {
+    0%,
+    100% {
         border-color: transparent;
     }
     50% {
@@ -380,32 +392,32 @@ body {
     font-size: 2rem;
 }
 
+
 /* ===== ABOUT SECTION ===== */
+
 .about {
     padding: 100px 20px;
     background: var(--white);
+    text-align: center;
+    /* ✅ center text */
 }
 
 .about-content {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 4rem;
-    align-items: center;
+    grid-template-columns: 1fr;
+    /* ✅ single column center */
+    gap: 2rem;
+    justify-items: center;
+    /* ✅ center horizontally */
 }
 
-.about-image {
-    animation: fadeInLeft 1s ease;
-}
 
-.about-image img {
-    width: 100%;
-    max-width: 350px;
-    border-radius: 15px;
-    box-shadow: var(--shadow);
-}
+/* Text Animation */
 
 .about-text {
     animation: fadeInRight 1s ease;
+    text-align: center;
+    /* ✅ center text */
 }
 
 .about-text h3 {
@@ -421,12 +433,19 @@ body {
     line-height: 1.8;
 }
 
+
+/* ✅ FIXED GRID (IMPORTANT) */
+
 .about-info {
     display: grid;
+    /* 🔥 FIXED */
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     margin-top: 2rem;
 }
+
+
+/* Info Card */
 
 .info-item {
     display: flex;
@@ -435,25 +454,28 @@ body {
     padding: 15px;
     background: var(--light-bg);
     border-radius: 10px;
-    transition: var(--transition);
+    transition: all 0.3s ease;
 }
 
 .info-item:hover {
     background: var(--gradient);
     color: var(--white);
-    transform: translateX(10px);
+    transform: translateX(8px);
 }
 
 .info-item i {
     font-size: 1.5rem;
     color: var(--primary-color);
+    transition: color 0.3s ease;
 }
 
 .info-item:hover i {
     color: var(--white);
 }
 
-/* Resume Download Section in About */
+
+/* Resume Download Section */
+
 .resume-download-section {
     margin-top: 2rem;
     text-align: center;
@@ -464,7 +486,22 @@ body {
     padding: 15px 35px;
 }
 
+
+/* ✅ RESPONSIVE FIX */
+
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .about-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 /* ===== SKILLS SECTION ===== */
+
 .skills {
     padding: 100px 20px;
     background: var(--light-bg);
@@ -535,7 +572,9 @@ body {
     color: var(--white);
 }
 
+
 /* ===== PROJECTS SECTION ===== */
+
 .projects {
     padding: 100px 20px;
     background: var(--white);
@@ -662,7 +701,9 @@ body {
     color: var(--primary-color);
 }
 
+
 /* ===== CONTACT SECTION ===== */
+
 .contact {
     padding: 100px 20px;
     background: var(--light-bg);
@@ -761,7 +802,9 @@ body {
     resize: vertical;
 }
 
+
 /* ===== FOOTER ===== */
+
 .footer {
     background: var(--secondary-color);
     color: var(--white);
@@ -799,7 +842,9 @@ body {
     transform: translateY(-5px);
 }
 
+
 /* ===== RESPONSIVE DESIGN ===== */
+
 @media (max-width: 968px) {
     .nav-links {
         position: fixed;
@@ -813,70 +858,54 @@ body {
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
         transition: var(--transition);
     }
-
     .nav-links.active {
         right: 0;
     }
-
     .resume-btn {
         display: none;
     }
-
     .hamburger {
         display: flex;
     }
-
     .hamburger.active span:nth-child(1) {
         transform: rotate(45deg) translate(8px, 8px);
     }
-
     .hamburger.active span:nth-child(2) {
         opacity: 0;
     }
-
     .hamburger.active span:nth-child(3) {
         transform: rotate(-45deg) translate(8px, -8px);
     }
-
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
     }
-
     .hero-title {
         font-size: 2.5rem;
     }
-
     .hero-subtitle {
         font-size: 1.5rem;
     }
-
     .hero-buttons {
         justify-content: center;
         flex-wrap: wrap;
     }
-
     .social-links {
         justify-content: center;
     }
-
     .about-content {
         grid-template-columns: 1fr;
         text-align: center;
     }
-
     .about-image img {
         margin: 0 auto;
     }
-
     .about-info {
         grid-template-columns: 1fr;
     }
-
     .contact-content {
         grid-template-columns: 1fr;
     }
-
     .footer-content {
         flex-direction: column;
         gap: 1rem;
@@ -887,28 +916,22 @@ body {
     .section-title {
         font-size: 2rem;
     }
-
     .hero-title {
         font-size: 2rem;
     }
-
     .hero-subtitle {
         font-size: 1.2rem;
     }
-
     .hero-buttons {
         flex-direction: column;
     }
-
     .btn {
         width: 100%;
         justify-content: center;
     }
-
     .projects-grid {
         grid-template-columns: 1fr;
     }
-
     .skills-grid {
         grid-template-columns: 1fr;
     }

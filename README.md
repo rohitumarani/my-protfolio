@@ -3,7 +3,6 @@
 ![Portfolio Banner](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=400&fit=crop)
 
 ## 👨‍💻 About
-hello
 
 Professional portfolio website for **Rohit Umarani** - Cloud Engineer & DevOps Engineer showcasing skills, projects, and experience in AWS cloud computing and DevOps practices.
 
